@@ -92,7 +92,7 @@ AC_CHECK_FUNCS([sinf cosf expf cargf cexpf crealf cimagf sqrtf],[],
                [AC_MSG_ERROR(Could not use special math functions)],)
 
 # Check for necessary header files
-AC_CHECK_HEADERS([stdio.h stdlib.h complex.h string.h getopt.h sys/resource.h float.h inttypes.h limits.h stdlib.h string.h unistd.h],[],
+AC_CHECK_HEADERS([stdio.h stdlib.h complex.h string.h getopt.h float.h inttypes.h limits.h stdlib.h string.h unistd.h],[],
                  [AC_MSG_ERROR(Could not use standard headers)])
 
 # Check for optional header files, libraries, programs
@@ -145,7 +145,7 @@ else
         #   SSSE3   :   tmmintrin.h
         #   SSE4.1/2:   smmintrin.h
         #   AVX     :   immintrin.h
-        AX_EXT
+        # AX_EXT
 
         if [ test "$ax_cv_have_sse41_ext" = yes && test "$ac_cv_header_smmintrin_h" = yes ]; then
             # SSE4.1/2 extensions

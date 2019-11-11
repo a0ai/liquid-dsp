@@ -33,7 +33,11 @@
 #define __LIQUID_INTERNAL_H__
 
 // Configuration file
+#ifdef _MINGW32_
 #include "config.h"
+#else
+#define SIZEOF_INT 4
+#endif
 
 #include <complex.h>
 #include "liquid.h"
